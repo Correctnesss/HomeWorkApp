@@ -2,11 +2,13 @@ package Training.lesson2;
 
 public class HomeWorkApp2 {
     public static void main(String[] args) {
+        String stringHomeWork ="StringHomeWork";
+        int quantity = 0;
+
         System.out.println(within10and20(3,10));
         System.out.println(isPositiveOrNegative(-1000));
         System.out.println(isNegative(-65));
-        System.out.println(PrintWordNTimes("string",
-                2));
+        PrintWordNTimes(stringHomeWork,quantity);
         System.out.println(leapYear(20));
     }
 
@@ -27,7 +29,7 @@ public class HomeWorkApp2 {
     }
 
     public static void PrintWordNTimes(String word, int times) {
-        for (int i = 1; i < times; i++) {
+        for (int i = 0; i < times; i++) {
             System.out.println(word);
         }
     }
