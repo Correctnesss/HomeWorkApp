@@ -45,7 +45,7 @@ public class HomeWorkApp3 {
         }
         System.out.println(Arrays.toString(method5(5,10)));
 
-        int[] array6 = {1,2,5,1,4,-11000,58,11,34,-200};
+        int[] array6 = {0};
         int maxResult = array6[0];
         int minResult = array6[0];
         for (int i = 1; i < array6.length; i++) {
@@ -56,6 +56,8 @@ public class HomeWorkApp3 {
             }
         }
         System.out.println("max: " + maxResult + " min: " + minResult);
+
+        int[] array7 = {2,3,4,5,6,7,1,3,4,5,14};
 
 
     }
