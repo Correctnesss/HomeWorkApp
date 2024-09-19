@@ -9,7 +9,7 @@ public class Homework4 {
 
     public static final int SIZE = 3;
 
-    public static final int DOTS_TO_WIN = 3;
+    public static final int DOTS_TO_WIN = 2;
 
     public static char DOT_EMPTY = '*';
     public static char DOT_O = 'O';
@@ -85,29 +85,38 @@ public class Homework4 {
     public static void checkWin(char symbol) {
         int sumDiagonal = 0;
         int sumReverseDiagonal = 0;
-        int sumI = 0;
+        int sumVertical = 0;
+        int sumHorizontal = 0;
         for (int i = 0; i < map.length; i++) {
-            for (int j = 0; j < map[i].length; j++){
-                if(i == j & map[i][j] == symbol) {
-                    sumDiagonal ++;
-                    if (sumDiagonal == DOTS_TO_WIN){
+            for (int j = 0; j < map[i].length; j++) {
+                if (i == j & map[i][j] == symbol) {
+                    sumDiagonal++;
+                    if (sumDiagonal == DOTS_TO_WIN) {
                         System.out.println(11);
                     }
                 }
-                if(i + j == map.length - 1 & map[i][j] == symbol){
-                    sumReverseDiagonal ++;
-                    if (sumReverseDiagonal == DOTS_TO_WIN){
+                if (i + j == map.length - 1 & map[i][j] == symbol) {
+                    sumReverseDiagonal++;
+                    if (sumReverseDiagonal == DOTS_TO_WIN) {
                         System.out.println(12);
                     }
-                }while(i<map.length)
-                if(i == 0 & map[i][j] == symbol){
-                    sumI ++;
-                    if (sumI == DOTS_TO_WIN){
+                }
+                if (map[i][j] == symbol) {
+                    sumHorizontal++;
+                    if (sumHorizontal == DOTS_TO_WIN) {
                         System.out.println(13);
+                    }
+                }
+                if (map[j][i] == symbol) {
+                    sumVertical++;
+                    if (sumVertical == DOTS_TO_WIN) {
+                        System.out.println(14);
                     }
                 }
 
             }
+            sumHorizontal = 0;
+            sumVertical = 0;
 
 
         }
