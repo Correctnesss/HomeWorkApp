@@ -1,5 +1,7 @@
 package Training.lesson4;
 
+import com.sun.source.tree.ContinueTree;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -7,9 +9,9 @@ import java.util.Scanner;
 public class Homework4 {
     public static char[][] map;
 
-    public static final int SIZE = 3;
+    public static final int SIZE = 4;
 
-    public static final int DOTS_TO_WIN = 2;
+    public static final int DOTS_TO_WIN = 3;
 
     public static char DOT_EMPTY = '*';
     public static char DOT_O = 'O';
@@ -82,37 +84,48 @@ public class Homework4 {
         return true;
     }
 
-    public static void checkWin(char symbol) {
+    public static boolean checkWin(char symbol) {
         int sumDiagonal = 0;
         int sumReverseDiagonal = 0;
         int sumVertical = 0;
         int sumHorizontal = 0;
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
-                if (i == j & map[i][j] == symbol) {
+                if (i == j && map[i][j] == symbol) {
                     sumDiagonal++;
                     if (sumDiagonal == DOTS_TO_WIN) {
-                        System.out.println(11);
+                        return true;
                     }
                 }
-                if (i + j == map.length - 1 & map[i][j] == symbol) {
+
+
+                if (i + j == map.length - 1 && map[i][j] == symbol) {
                     sumReverseDiagonal++;
                     if (sumReverseDiagonal == DOTS_TO_WIN) {
-                        System.out.println(12);
+                        return true;
                     }
                 }
+
+
                 if (map[i][j] == symbol) {
                     sumHorizontal++;
                     if (sumHorizontal == DOTS_TO_WIN) {
-                        System.out.println(13);
+                        return true;
                     }
+                } else {
+                    sumHorizontal = 0;
                 }
+
+
                 if (map[j][i] == symbol) {
                     sumVertical++;
                     if (sumVertical == DOTS_TO_WIN) {
-                        System.out.println(14);
+                        return true;
                     }
+                } else {
+                    sumVertical = 0;
                 }
+
 
             }
             sumHorizontal = 0;
@@ -120,27 +133,38 @@ public class Homework4 {
 
 
         }
+        return false;
     }
 
 
     public static void main(String[] args) {
         initMap();
         printMap();
-        humanTurn();
-        printMap();
-        humanTurn();
-        printMap();
-        humanTurn();
-        printMap();
-//        humanTurn();
-//        printMap();
-//        humanTurn();
-//        printMap();
-//        humanTurn();
-//        printMap();
-//        humanTurn();
-//        printMap();
-        checkWin(DOT_X);
+        while (true){
+            humanTurn();
+            printMap();
+            if(checkWin(DOT_X)){
+                System.out.println("Побеждает человек");
+                break;
+            }
+            if(isMapFull()) {
+                System.out.println("Ничья!");
+                break;
+            }
+            aiTurn();
+            printMap();
+            if(checkWin(DOT_O)){
+                System.out.println("Робот выиграл");
+                break;
+            }
+            if(isMapFull()) {
+                System.out.println("Ничья!");
+                break;
+            }
+
+
+        }
+        System.out.println("Game over!");
 
     }
 
