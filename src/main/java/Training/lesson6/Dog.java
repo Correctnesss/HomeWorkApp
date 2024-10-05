@@ -9,15 +9,17 @@ public class Dog extends Animal {
             System.out.println(name + " не может пробежать больше 500 м.");
         } else {
             System.out.println(name + " пробежал " + run + " м.");
-        } if (swim>10){
+        }
+        if (swim > 10) {
             System.out.println(name + " не может проплыть больше 10 м.");
         } else {
             System.out.println(name + " проплыл " + swim + " м. ");
         }
         System.out.println();
-        quantity+=1;
+        quantity += 1;
     }
-    public void AmountDog(){
+
+    public void AmountDog() {
         System.out.println("Количество котиков: " + quantity);
     }
 }

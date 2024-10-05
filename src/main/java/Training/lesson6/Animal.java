@@ -6,7 +6,7 @@ public class Animal {
     int swim;
 
 
-    public Animal(String name,int run, int swim) {
+    public Animal(String name, int run, int swim) {
         this.run = run;
         this.swim = swim;
         this.name = name;

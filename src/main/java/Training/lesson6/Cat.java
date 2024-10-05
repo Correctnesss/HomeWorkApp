@@ -12,9 +12,10 @@ public class Cat extends Animal {
         }
         System.out.println(name + " не умеет плавать ");
         System.out.println();
-        quantity+=1;
+        quantity += 1;
     }
-    public void AmountCat(){
+
+    public void AmountCat() {
         System.out.println("Количество котиков: " + quantity);
     }
 }
