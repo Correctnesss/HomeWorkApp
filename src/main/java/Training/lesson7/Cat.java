@@ -11,7 +11,15 @@ public class Cat {
     }
 
     public void eat(Plate p) {
-        p.decreaseFood(appetite);
+        p.decreaseFood(this);
+    }
+
+    public int getAppetite() {
+        return appetite;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void satiety(Plate s) {
@@ -37,5 +45,11 @@ public class Cat {
             }
         }
     }
+
+    @Override
+    public String toString() {
+        return name + " " + satiety;
+    }
+
 
 }
