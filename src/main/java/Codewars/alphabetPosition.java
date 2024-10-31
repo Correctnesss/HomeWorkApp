@@ -27,6 +27,8 @@ public class alphabetPosition {
             'x',
             'y',
             'z'};
+    int a = 'a' + 5;
+
 
     public static String position(char alphabet) {
         for (int i = 0; i < alphabet1.length; i++) {
@@ -37,8 +39,14 @@ public class alphabetPosition {
         return "";
     }
 
+    public static String position1(char alphabet) {
+        return ("Position of alphabet: " + (alphabet - 96));
+    }
+
     public static void main(String[] args) {
-        System.out.println(position('v'));
+        System.out.println(position1('a'));
+//        int asd = 'a' + 5;
+//        System.out.println(asd);
     }
 
 
