@@ -1,4 +1,4 @@
-package Training.lesson5;
+package Training1.lesson5;
 
 public class Person {
     private String FCs;

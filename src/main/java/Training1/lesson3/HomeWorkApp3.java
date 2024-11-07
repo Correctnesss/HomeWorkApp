@@ -1,4 +1,4 @@
-package Training.lesson3;
+package Training1.lesson3;
 
 import java.util.Arrays;
 

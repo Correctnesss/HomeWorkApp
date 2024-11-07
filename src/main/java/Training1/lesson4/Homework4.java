@@ -1,6 +1,4 @@
-package Training.lesson4;
-
-import com.sun.source.tree.ContinueTree;
+package Training1.lesson4;
 
 import java.util.Arrays;
 import java.util.Random;

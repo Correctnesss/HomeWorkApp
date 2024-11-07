@@ -1,4 +1,4 @@
-package Training.lesson6;
+package Training1.lesson6;
 
 public class Dog extends Animal {
     private static int quantityDog;

@@ -103,6 +103,6 @@ public class ЛАКИ {
     }
 
     public static void main(String[] args) {
-        luck(150, 280, 2000000000);
+        luck(100, 300, 2000000000);
     }
 }

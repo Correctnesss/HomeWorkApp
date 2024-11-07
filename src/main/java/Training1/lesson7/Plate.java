@@ -1,4 +1,4 @@
-package Training.lesson7;
+package Training1.lesson7;
 
 public class Plate {
     private int food;
