@@ -94,7 +94,7 @@ public class ЛАКИ {
             sum += price;
             sum1 += 1;
         }
-//        String sum1 =Integer.toString(sum);
+        sum = sum + 1000000000;
 
 
         System.out.println(sum / 1000000000 + " лярдов");
@@ -103,6 +103,6 @@ public class ЛАКИ {
     }
 
     public static void main(String[] args) {
-        luck(100, 300, 2000000000);
+        luck(100, 244, 1120000000);
     }
 }
