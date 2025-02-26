@@ -11,11 +11,15 @@ public class HomeWork1<T> {
     }
 
 
-    public <T> void getAvg(T[] array, int a, int b) {
-        T s = array[a];
-        T c = array[b];
-        array[a] = c;
-        array[b] = s;
+    public T[] getNums() {
+        return nums;
+    }
+
+    public void swap(int a, int b) {
+        T s = nums[a];
+        T c = nums[b];
+        nums[a] = c;
+        nums[b] = s;
     }
 
 }
